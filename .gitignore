@@ -1,0 +1,24 @@
+# Data (not redistributable - see data/README.md)
+data/*
+!data/README.md
+ 
+# Analysis outputs
+deseq2_results/
+*_results/
+results/
+ 
+# R
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+ 
+# Jupyter
+.ipynb_checkpoints/
+ 
+# System and editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+ 
