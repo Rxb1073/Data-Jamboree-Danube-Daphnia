@@ -66,16 +66,36 @@ Data-Jamboree-Danube-Daphnia/
 │
 ├── integration/                           # Multi-omics integration
 │   ├── MOFA2_integration.R               #   MOFA2: 10 factors, 3 views, 142 shared samples
-│   └── README.md                         #   Variance explained & key results
+│   ├── README.md                         #   Variance explained & key results
 │   └── README_integration_inputs.txt     # Module eigengenes, gene assignments, correlations
 │
 ├── pathway_network_analysis/              # Pathway enrichment & network analysis
 │   ├── pathway_network_analysis.R        #   DESeq2 per-site, orthologs, STRING, AOP, correlations
 │   ├── README_network_analysis.txt       #   STRING/Cytoscape/cytoHubba hub gene results
 │   ├── README_chemical_correlation.txt   #   72 significant gene × chemical correlations
-│   └── README_IMPaLA.txt                 #   24 significant multi-omics pathways
+│   ├── README_IMPaLA.txt                 #   24 significant multi-omics pathways
 │   └── README_pathway_enrichment_inputs.txt   # Pooled DEG lists, universal responders, MEblue genes
+│
+└── outputs/                               # Generated figures and result tables
+    ├── transcriptomics/
+    │   ├── figures/                       #   DEG counts per site, WGCNA dendrogram,
+    │   │                                  #   module–chemical heatmap, MEblue eigengene
+    │   └── results/                       #   Module eigengenes, gene assignments, site summaries
+    ├── metabolomics/
+    │   ├── figures/                       #   PCA (both ion modes), significant features per site
+    │   └── results/                       #   Annotated significant features, KEGG IDs
+    ├── integration/
+    │   └── figures/                       #   MOFA2 factor scatters, variance explained,
+    │                                      #   MOFA × WGCNA eigengene correlation
+    └── pathway_network_analysis/
+        ├── figures/                       #   STRING PPI network, cytoHubba top-10 (MCC,
+        │                                  #   Degree, Betweenness), AOP diagram,
+        │                                  #   hub gene × chemical heatmap
+        └── results/                       #   Pooled DEG tables, annotated MEblue genes,
+                                           #   universal responders
 ```
+
+> Input data is not included (see `data/README.md`). Remaining intermediate files are available on request.
 
 ## Methods Summary
 
